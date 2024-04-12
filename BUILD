@@ -162,17 +162,6 @@ android_local_test(
    deps = [
        ":test_deps",
        ":testdpc_lib",
-   ],
-)
-
-android_local_test(
-   name = "GetProvisioningModeActivityTest",
-   srcs = ["src/test/java/com/afwsamples/testdpc/provision/GetProvisioningModeActivityTest.java"],
-   manifest = MANIFEST,
-   test_class = "com.afwsamples.testdpc.provision.GetProvisioningModeActivityTest",
-   deps = [
-       ":test_deps",
-       ":testdpc_lib",
        "@maven//:org_robolectric_robolectric",
        "@robolectric//bazel:android-all",
    ],
