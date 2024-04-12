@@ -129,6 +129,7 @@ android_local_test(
        ":testdpc_lib",
        "@robolectric//bazel:android-all",
    ],
+   custom_package = "com.afwsamples.testdpc.common"
 )
 
 android_local_test(
@@ -141,6 +142,7 @@ android_local_test(
        ":testdpc_lib",
        "@robolectric//bazel:android-all",
    ],
+   custom_package = "com.afwsamples.testdpc.feedback"
 )
 
 android_local_test(
@@ -152,6 +154,7 @@ android_local_test(
        ":testdpc_lib",
        "@robolectric//bazel:android-all",
    ],
+   custom_package = "com.afwsamples.testdpc.policy.wifimanagement"
 )
 
 android_local_test(
@@ -165,6 +168,7 @@ android_local_test(
        "@maven//:org_robolectric_robolectric",
        "@robolectric//bazel:android-all",
    ],
+   custom_package = "com.afwsamples.testdpc.provision"
 )
 
 java_test(
