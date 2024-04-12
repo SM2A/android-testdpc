@@ -119,64 +119,64 @@ java_library(
     srcs = ["src/test/java/com/afwsamples/testdpc/util/flags/Utils.java"],
 )
 
-#
-#android_local_test(
-#    name = "PermissionsHelperTest",
-#    srcs = ["src/test/java/com/afwsamples/testdpc/common/PermissionsHelperTest.java"],
-#    manifest = MANIFEST,
-#    deps = [
-#        ":test_deps",
-#        ":testdpc_lib",
-#        "@robolectric//bazel:android-all",
-#    ],
-#)
-#
-#android_local_test(
-#    name = "AppStatesServiceTest",
-#    srcs = ["src/test/java/com/afwsamples/testdpc/feedback/AppStatesServiceTest.java"],
-#    manifest = MANIFEST,
-#    deps = [
-#        ":androidx_deps",
-#        ":test_deps",
-#        ":testdpc_lib",
-#        "@robolectric//bazel:android-all",
-#    ],
-#)
-#
-#android_local_test(
-#    name = "WifiConfigUtilTest",
-#    srcs = ["src/test/java/com/afwsamples/testdpc/policy/wifimanagement/WifiConfigUtilTest.java"],
-#    manifest = MANIFEST,
-#    deps = [
-#        ":test_deps",
-#        ":testdpc_lib",
-#        "@robolectric//bazel:android-all",
-#    ],
-#)
-#
-#android_local_test(
-#    name = "GetProvisioningModeActivityTest",
-#    srcs = ["src/test/java/com/afwsamples/testdpc/provision/GetProvisioningModeActivityTest.java"],
-#    manifest = MANIFEST,
-#    test_class = "com.afwsamples.testdpc.provision.GetProvisioningModeActivityTest",
-#    deps = [
-#        ":test_deps",
-#        ":testdpc_lib",
-#    ],
-#)
-#
-#android_local_test(
-#    name = "GetProvisioningModeActivityTest",
-#    srcs = ["src/test/java/com/afwsamples/testdpc/provision/GetProvisioningModeActivityTest.java"],
-#    manifest = MANIFEST,
-#    test_class = "com.afwsamples.testdpc.provision.GetProvisioningModeActivityTest",
-#    deps = [
-#        ":test_deps",
-#        ":testdpc_lib",
-#        "@maven//:org_robolectric_robolectric",
-#        "@robolectric//bazel:android-all",
-#    ],
-#)
+
+android_local_test(
+   name = "PermissionsHelperTest",
+   srcs = ["src/test/java/com/afwsamples/testdpc/common/PermissionsHelperTest.java"],
+   manifest = MANIFEST,
+   deps = [
+       ":test_deps",
+       ":testdpc_lib",
+       "@robolectric//bazel:android-all",
+   ],
+)
+
+android_local_test(
+   name = "AppStatesServiceTest",
+   srcs = ["src/test/java/com/afwsamples/testdpc/feedback/AppStatesServiceTest.java"],
+   manifest = MANIFEST,
+   deps = [
+       ":androidx_deps",
+       ":test_deps",
+       ":testdpc_lib",
+       "@robolectric//bazel:android-all",
+   ],
+)
+
+android_local_test(
+   name = "WifiConfigUtilTest",
+   srcs = ["src/test/java/com/afwsamples/testdpc/policy/wifimanagement/WifiConfigUtilTest.java"],
+   manifest = MANIFEST,
+   deps = [
+       ":test_deps",
+       ":testdpc_lib",
+       "@robolectric//bazel:android-all",
+   ],
+)
+
+android_local_test(
+   name = "GetProvisioningModeActivityTest",
+   srcs = ["src/test/java/com/afwsamples/testdpc/provision/GetProvisioningModeActivityTest.java"],
+   manifest = MANIFEST,
+   test_class = "com.afwsamples.testdpc.provision.GetProvisioningModeActivityTest",
+   deps = [
+       ":test_deps",
+       ":testdpc_lib",
+   ],
+)
+
+android_local_test(
+   name = "GetProvisioningModeActivityTest",
+   srcs = ["src/test/java/com/afwsamples/testdpc/provision/GetProvisioningModeActivityTest.java"],
+   manifest = MANIFEST,
+   test_class = "com.afwsamples.testdpc.provision.GetProvisioningModeActivityTest",
+   deps = [
+       ":test_deps",
+       ":testdpc_lib",
+       "@maven//:org_robolectric_robolectric",
+       "@robolectric//bazel:android-all",
+   ],
+)
 
 java_test(
     name = "BooleanParserTest",
