@@ -58,6 +58,7 @@ android_library(
         artifact("org.robolectric:robolectric"),
         artifact("org.robolectric:robolectric-annotations"),
         artifact("org.robolectric:shadows-core"),
+        "@maven//:org_robolectric_shadows_framework",
         "@robolectric//bazel:android-all",
     ],
 )
