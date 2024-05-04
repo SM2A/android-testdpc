@@ -63,9 +63,9 @@ android_library(
         "@maven//:org_robolectric_annotations",
         "@maven//:com_google_truth_truth",
         "@maven//:androidx_test_core",
-        "@maven//:com_google_testparameterinjector_test_parameter_injector"
+        "@maven//:com_google_testparameterinjector_test_parameter_injector",
         "@maven//:org_robolectric_shadows_framework",
-        "@robolectric//bazel:android-all",
+        "@robolectric//bazel:android-all"
     ],
 )
 
