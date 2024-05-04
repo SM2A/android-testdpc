@@ -58,6 +58,12 @@ android_library(
         artifact("org.robolectric:robolectric"),
         artifact("org.robolectric:robolectric-annotations"),
         artifact("org.robolectric:shadows-core"),
+        "@maven//:org_robolectric_robolectric",
+        "@robolectric//bazel:android-all",
+        "@maven//:org_robolectric_annotations",
+        "@maven//:com_google_truth_truth",
+        "@maven//:androidx_test_core",
+        "@maven//:com_google_testparameterinjector_test_parameter_injector"
         "@maven//:org_robolectric_shadows_framework",
         "@robolectric//bazel:android-all",
     ],
