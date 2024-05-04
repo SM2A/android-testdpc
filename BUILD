@@ -48,24 +48,13 @@ android_library(
 android_library(
     name = "test_deps",
     exports = [
-        artifact("com.google.testparameterinjector:test-parameter-injector"),
-        artifact("com.google.truth:truth"),
-        artifact("androidx.test:core"),
-        artifact("androidx.test:monitor"),
-        artifact("androidx.test:runner"),
-        artifact("junit:junit"),
-        artifact("org.hamcrest:java-hamcrest"),
-        # artifact("org.robolectric:robolectric"),
-        # artifact("org.robolectric:robolectric-annotations"),
-        # artifact("org.robolectric:shadows-core"),
         "@maven//:org_robolectric_robolectric",
-        # "@robolectric//bazel:android-all",
+        "@robolectric//bazel:android-all",
         "@maven//:org_robolectric_annotations",
+        "@maven//:org_robolectric_shadows_framework",
         "@maven//:com_google_truth_truth",
         "@maven//:androidx_test_core",
-        "@maven//:com_google_testparameterinjector_test_parameter_injector",
-        "@maven//:org_robolectric_shadows_framework",
-        "@robolectric//bazel:android-all"
+        "@maven//:com_google_testparameterinjector_test_parameter_injector"
     ],
 )
 
