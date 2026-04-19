@@ -49,8 +49,14 @@ jobs:
             echo "version=v$(grep -o 'android:versionName="[^"]*"' src/main/AndroidManifest.xml | awk -F'"' '{print $2}')"
           } >> $GITHUB_ENV
 
+      - name: Print checksum
+        run: |
+          apksigner verify -print-certs bazel-bin/testdpc.apk | grep -Po "(?<=SHA-256 digest:) .*" | xxd -r -p | openssl base64 | tr -d '=' | tr -- '+/=' '-_' > checksum.txt
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.repo }}-${{ env.version }}@${{ env.commit }}
-          path: bazel-bin/*.apk
+          path: |
+            bazel-bin/*.apk
+            bazel-bin/checksum.txt
